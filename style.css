@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Hind); /*--- Body Font --*/
+@import url(https://fonts.googleapis.com/css?family=Nobile); /*--- Heading Font --*/
+*{
+    margin : 0;
+    border : 0;
+    padding : 0;
+}
+body{
+    background-image: url("/Users/91989/Desktop/ah/img/rth.jpeg");
+    background-size: 100% 100%;
+    background-position:auto;
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+    position: relative;
+}
+h1{
+    margin-top: 1%;
+    font-family: 'Nobile', sans-serif;
+    text-align: center;
+    font-size: 175%;
+    color: #4A4444;
+    text-transform: : uppercase;
+    letter-spacing: 3px;
+    padding: 3% 3%;
+}
+#welcome-section{
+   padding-left: 25%;
+   padding-right: 25%;
+}
+#welcome-header{
+  border-style:double;
+  border-color: #3a0460;
+  border-width: 3px;
+}
+h3{
+    font-family: 'Nobile', sans-serif;
+    text-align: center;
+    color: #4A4444;
+    text-transform: : uppercase;
+    letter-spacing: 1%;
+    margin-top: 5%;
+}
+p{
+    padding: 2%;
+    color: #4A4444;
+    text-align: justify;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+li:hover{
+  padding-bottom: 10px;
+}
+#banner-wrapper1, #banner-wrapper2{
+    max-width: 90%;
+    margin: 0 auto;
+}
+/*-- Start Image Slider Style --*/
+.slider{
+    width: 100%;
+}
+.slider1 img{
+    width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+}
+.slider .bx-wrapper .bx-controls-direction a{
+    outline: 0 none;
+    position: absolute;
+    text-indent:  -200%;
+    top: 40%;
+    height: 70px;
+    width: 40px;
+    z-index: -1;
+    transition: all 0.7s;
+}
+.slider .bx-wrapper:hover .bx-controls-direction a{
+    z-index:5;
+}
+.slider .bx-wrapper .bx-prev{
+    background: #a89999 url("../img/left-arrow-white.png") no-repeat 7.5px 15px;
+    left: 0px;
+    opacity: 0.3;
+}
+.slider .bx-wrapper .bx-prev:hover{
+    opacity: 0.6;
+}
+.slider .bx-wrapper .bx-next{
+    background: #000 url("../img/right-arrow-white.png") no-repeat 12px 15px;
+    right: 0px;
+    opacity: 0.3;
+}
+.slider .bx-wrapper .bx-next:hover{
+    opacity: 0.6;
+}
+/*-- End Image Slider Style --*/
+/*-- Start Clearfix Style --*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*-- End Clearfix Style --*/
+.one-half{
+    width:44%;
+    float: left;
+    margin: 2% 0 3% 4%;
+    text-align: center;
+}
+.one-third{
+    width: 28%;
+    float: left;
+    margin: 2% 0 3% 4%;
+    text-align: center;
+}
+.left-col{
+    width: 60%;
+    float: left;
+    margin: 4% 0 4% 4%;
+}
+.sidebar{
+    width: 28%;
+    float:right;
+    margin: 4% 4%;
+}
+.sidebar img{
+    opacity: 0.8;
+}
+/*-- Start Parralax Section --*/
+.parallax-1{
+    background-size: 100% !important;
+    background-position: center !important;
+    background: url("../img/parallax-img1.jpg") no-repeat fixed; 
+}
+.parallax-inner, .parallax-outer{
+    padding-top: 75px;
+    padding-bottom: 350px;
+}
+.parallax-2{
+    background-size: 100% !important;
+    background-position: center !important;
+    background: url("../img/parallax-img2.jpg") no-repeat fixed;
+}
+
+.parallax-inner h3, .parallax-inner p, .parallax-outer h3, .parallax-outer p{
+    color: #F1F1F1;
+}
+/*-- End Parralax Section --*/
+footer{
+    background: #000;
+    width: 100%;
+    margin-top: 5%;
+    padding: 1% 0;
+    overflow: auto;
+}
+footer p{
+    color: #F1F1F1;
+}
+#footer-custom{
+    position: fixed;
+    bottom: 0;
+}
+/*-- Start Media Queries --*/
+@media screen and (max-width: 823px){
+    .slider .bx-wrapper .bx-controls{
+        display:none;
+       }
+    .parallax-inner, .parallax-outer{
+      display:none;
+       }
+    .one-third, .one-half{
+        width:100%;
+        font-size: 85%;
+        margin: 0 0 3% 0;
+    }
+    h1{
+        font-size: 110%;
+    }
+    .left-col{
+        width: 100%;
+        margin: 0 0 3% 0;
+        font-size: 85%;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    img{
+        width: 100%;
+    }
+    #side-img{
+        width:50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    h3{
+        padding-top: 3%;
+    }
+}
+/*-- End Media Queries --*/

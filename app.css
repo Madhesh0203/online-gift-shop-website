@@ -1,0 +1,236 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ae72ba url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-weight: 300;
+    font-size: 45px;
+    
+}
+
+
+
+
+
+
+/*
+*Styles for the score-panel
+*/
+
+.timer {
+  padding: 0px 10px 0px 10px;
+}
+
+/*
+*Style for the modal
+*/
+
+/*MODAL CREDITS: 
+1.https://matthewcranford.com/memory-game-walkthrough-part-7-making-a-modal/  
+2.https://sabe.io/tutorials/how-to-create-modal-popup-box */
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba( 0, 0, 0, 0.5);
+  transform: scale(1.1); /* ADD COMMENTS */
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; /*ADD COMMENTS */
+}
+
+.modal-content {
+  position: absolute;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, red, orange, yellow);
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+
+.modal-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  border-bottom: 3px solid white;
+}
+
+.modal-title {
+  font-family: 'Lobster', cursive;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: white;
+  color: red;
+  font-weight: bold;
+}
+
+.modal-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 3px solid white;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.modal-button {
+  width: 60px;
+  height: 40px;
+}
+
+.modal-cancel {
+  color: red;
+  background: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 3px 3px 3px 3px;
+}
+
+.modal-replay {
+  color: red;
+  background: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+.close-button:hover {
+  background-color: rgb(67, 47, 120);
+}
+
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(to right, red, orange, yellow);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: white;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 black;
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: black;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: yellow;
+    font-size: 33px;
+}
+
+.icon {
+    color: red;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    font-size: 18px;
+    color: red;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel span {
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+}
